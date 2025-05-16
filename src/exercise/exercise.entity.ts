@@ -6,7 +6,7 @@ export class Exercise {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @ManyToOne(() => Chapter, { eager: true })
+  @ManyToOne(() => Chapter, { eager: true, onDelete: 'CASCADE' })
   chapter?: Chapter;
 
   @Column()
